@@ -1,7 +1,7 @@
 # Settings
 baseurl = "https://trishtigupta.github.io"
 languageCode = "en-us"
-title = "Tridhti Gupta"
+title = "Trishti Gupta"
 theme = "autophugo"
 disableKinds = ["taxonomy", "term"]
 #[taxonomies]
@@ -50,7 +50,7 @@ disableKinds = ["taxonomy", "term"]
 
     [params.footer.paragraph]
     headline = "Trishti Gupta"
-    text = "Nulla consequat, ex ut suscipit rutrum, mi dolor tincidunt erat, et scelerisque turpis ipsum eget quis orci mattis aliquet. Maecenas fringilla et ante at lorem et ipsum. Dolor nulla eu bibendum sapien. Donec non pharetra dui. Nulla consequat, ex ut suscipit rutrum, mi dolor tincidunt erat, et scelerisque turpis ipsum."
+    text = "Hi there, welcome to my portfolio."
 
     [params.footer.social]
     headline = "Follow me"
