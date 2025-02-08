@@ -1,7 +1,7 @@
 # Settings
-baseurl = "https://kc0bfv.github.io/autophugo/"
+baseurl = "https://trishtigupta.github.io"
 languageCode = "en-us"
-title = "AutoPhugo"
+title = "Tridhti Gupta"
 theme = "autophugo"
 disableKinds = ["taxonomy", "term"]
 #[taxonomies]
@@ -14,7 +14,7 @@ disableKinds = ["taxonomy", "term"]
 
 [params]
     # Meta
-    description = "AutoPhugo - Photo Gallery on Hugo"
+    description = "Trishti Gupta"
     keywords = "phugo, hugo, photogallery, photoblog, hugo theme"
     #msvalidate = ""
     #googlesiteverification = ""
@@ -25,7 +25,7 @@ disableKinds = ["taxonomy", "term"]
     #column_count = 2
     #breadcrumb_use_title = false
     #filename_as_phototitle = false
-    #images_downloadable = true
+    images_downloadable = false
     #images_downloadable_use_orig = false
     #taxonomies_links = false
 
@@ -34,7 +34,7 @@ disableKinds = ["taxonomy", "term"]
     #facebook_admin = "facebook_example"
 
     [params.author]
-    name = "Karl Sickendick"
+    name = "Trishti Gupta"
     email = "kc0bfv@gmail.com"
 
     # Headerbar links
@@ -49,7 +49,7 @@ disableKinds = ["taxonomy", "term"]
     # Footer panel
 
     [params.footer.paragraph]
-    headline = "Magna feugiat sed adipiscing"
+    headline = "Trishti Gupta"
     text = "Nulla consequat, ex ut suscipit rutrum, mi dolor tincidunt erat, et scelerisque turpis ipsum eget quis orci mattis aliquet. Maecenas fringilla et ante at lorem et ipsum. Dolor nulla eu bibendum sapien. Donec non pharetra dui. Nulla consequat, ex ut suscipit rutrum, mi dolor tincidunt erat, et scelerisque turpis ipsum."
 
     [params.footer.social]
