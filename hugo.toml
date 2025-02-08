@@ -15,14 +15,15 @@ disableKinds = ["taxonomy", "term"]
 [params]
     # Meta
     description = "Trishti Gupta"
-    keywords = "phugo, hugo, photogallery, photoblog, hugo theme"
+    keywords = "photogallery, trishti gupta"
+    favicon = "favicon.ico"
     #msvalidate = ""
     #googlesiteverification = ""
     #thumb_width = 480
     #thumb_quality = 50
     #full_width = 960
     #full_quality = 90
-    #column_count = 2
+    column_count = 3
     #breadcrumb_use_title = false
     #filename_as_phototitle = false
     images_downloadable = false
@@ -35,7 +36,7 @@ disableKinds = ["taxonomy", "term"]
 
     [params.author]
     name = "Trishti Gupta"
-    email = "kc0bfv@gmail.com"
+    email = "trishtigupta2002@gmail.com"
 
     # Headerbar links
     # Do not put too many links here,
@@ -50,34 +51,34 @@ disableKinds = ["taxonomy", "term"]
 
     [params.footer.paragraph]
     headline = "Trishti Gupta"
-    text = "Hi there, welcome to my portfolio."
+    text = "Artist | Educator | Researcher | Teacher Trainer | Passionate about innovation, creativity, and knowledge exploration. Contact me at: iamtrishti@gmail.com "
 
     [params.footer.social]
     headline = "Follow me"
 
-    [[params.footer.social.links]]
-    label = "Twitter"
-    url = "#"
-    icon = "fa-twitter"
+    #[[params.footer.social.links]]
+    #label = "Twitter"
+    #url = "#"
+    #icon = "fa-twitter"
 
-    [[params.footer.social.links]]
-    label = "Facebook"
-    url = "#"
-    icon = "fa-facebook"
+    #[[params.footer.social.links]]
+    #label = "Facebook"
+    #url = "#"
+    #icon = "fa-facebook"
 
     [[params.footer.social.links]]
     label = "Instagram"
     url = "#"
     icon = "fa-instagram"
 
-    [[params.footer.social.links]]
-    label = "Github"
-    url = "#"
-    icon = "fa-github"
+    #[[params.footer.social.links]]
+    #label = "Github"
+    #url = "#"
+    #icon = "fa-github"
 
     [[params.footer.social.links]]
     label = "LinkedIn"
-    url = "#"
+    url = "https://www.linkedin.com/in/trishtigupta"
     icon = "fa-linkedin"
 
     # Contact form
@@ -94,7 +95,7 @@ disableKinds = ["taxonomy", "term"]
     # - you're done. Happy mailing!
 
     [params.footer.contact]
-    hide = false # Set this to true if you don't want to have a contact form on your site
+    hide = true # Set this to true if you don't want to have a contact form on your site
     formspreeID = "myuniqueID" # Getting value from Formspree integration endpoint (eg. https://formspree.io/f/myuniqueID)
     headline = "Get in touch"
     buttonText = "Send"
@@ -115,4 +116,4 @@ disableKinds = ["taxonomy", "term"]
 
     # Copyright
     [params.footer.copyright]
-    name = "Your name"
+    name = "Trishti Gupta"
