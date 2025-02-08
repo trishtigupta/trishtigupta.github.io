@@ -1,5 +1,5 @@
 # Settings
-baseurl = ""
+baseurl = "https://trishtigupta.github.io/"
 languageCode = "en-us"
 title = "Trishti Gupta"
 theme = "autophugo"
