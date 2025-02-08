@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Trishti Gupta</title>
-    <link>https://trishtigupta.github.io/</link>
-    <description>Recent content on Trishti Gupta</description>
+    <title>AutoPhugo</title>
+    <link>https://kc0bfv.github.io/autophugo/</link>
+    <description>Recent content on AutoPhugo</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <managingEditor>trishtigupta2002@gmail.com (Trishti Gupta)</managingEditor>
-    <webMaster>trishtigupta2002@gmail.com (Trishti Gupta)</webMaster>
+    <managingEditor>kc0bfv@gmail.com (Karl Sickendick)</managingEditor>
+    <webMaster>kc0bfv@gmail.com (Karl Sickendick)</webMaster>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="https://trishtigupta.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://kc0bfv.github.io/autophugo/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

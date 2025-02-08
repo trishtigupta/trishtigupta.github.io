@@ -1,7 +1,7 @@
 # Settings
-baseurl = "https://trishtigupta.github.io/"
+baseurl = "https://kc0bfv.github.io/autophugo/"
 languageCode = "en-us"
-title = "Trishti Gupta"
+title = "AutoPhugo"
 theme = "autophugo"
 disableKinds = ["taxonomy", "term"]
 #[taxonomies]
@@ -14,8 +14,8 @@ disableKinds = ["taxonomy", "term"]
 
 [params]
     # Meta
-    description = "Trishti Gupta"
-    keywords = "photoblog, Trishti"
+    description = "AutoPhugo - Photo Gallery on Hugo"
+    keywords = "phugo, hugo, photogallery, photoblog, hugo theme"
     #msvalidate = ""
     #googlesiteverification = ""
     #thumb_width = 480
@@ -25,13 +25,17 @@ disableKinds = ["taxonomy", "term"]
     #column_count = 2
     #breadcrumb_use_title = false
     #filename_as_phototitle = false
-    images_downloadable = false
+    #images_downloadable = true
     #images_downloadable_use_orig = false
     #taxonomies_links = false
 
+    #[params.social]
+    #twitter = "twitter_example"
+    #facebook_admin = "facebook_example"
+
     [params.author]
-    name = "Trishti Gupta"
-    email = "trishtigupta2002@gmail.com"
+    name = "Karl Sickendick"
+    email = "kc0bfv@gmail.com"
 
     # Headerbar links
     # Do not put too many links here,
@@ -45,8 +49,8 @@ disableKinds = ["taxonomy", "term"]
     # Footer panel
 
     [params.footer.paragraph]
-    headline = "Trishti Gupta"
-    text = " I’m Trishti Gupta, an artist, illustrator, and creative professional with a passion for bringing ideas to life through art. I blend traditional techniques with modern design to create unique, captivating pieces that tell compelling stories. Whether through illustration, digital art, or design, I love crafting visuals that inspire and connect with others. Join me in exploring my creative journey and discover how my work transforms imagination into visual masterpieces."
+    headline = "Magna feugiat sed adipiscing"
+    text = "Nulla consequat, ex ut suscipit rutrum, mi dolor tincidunt erat, et scelerisque turpis ipsum eget quis orci mattis aliquet. Maecenas fringilla et ante at lorem et ipsum. Dolor nulla eu bibendum sapien. Donec non pharetra dui. Nulla consequat, ex ut suscipit rutrum, mi dolor tincidunt erat, et scelerisque turpis ipsum."
 
     [params.footer.social]
     headline = "Follow me"
@@ -90,7 +94,7 @@ disableKinds = ["taxonomy", "term"]
     # - you're done. Happy mailing!
 
     [params.footer.contact]
-    hide = true # Set this to true if you don't want to have a contact form on your site
+    hide = false # Set this to true if you don't want to have a contact form on your site
     formspreeID = "myuniqueID" # Getting value from Formspree integration endpoint (eg. https://formspree.io/f/myuniqueID)
     headline = "Get in touch"
     buttonText = "Send"
