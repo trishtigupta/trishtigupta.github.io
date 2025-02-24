@@ -50,8 +50,8 @@ disableKinds = ["taxonomy", "term"]
     # Footer panel
 
     [params.footer.paragraph]
-    headline = "Trishti Gupta"
-    text = "Artist | Educator | Researcher | Teacher Trainer | Passionate about innovation, creativity, and knowledge exploration. Contact me at: iamtrishti@gmail.com "
+    headline = "Trishti Gupta- Educator & Illustrator"
+    text = "As an educator with an MA in Education, I believe learning should be an adventure. I love combining arts and crafts with education to create enriching experiences for children. My portfolio showcases original artwork alongside inspired pieces, all infused with my unique perspective. I'm excited to contribute to the education field in whatever way possible, and I'm also pursuing opportunities in children's literature illustration. Contact me at: iamtrishti@gmail.com"
 
     [params.footer.social]
     headline = "Follow me"
