@@ -38,7 +38,7 @@ body { -ms-overflow-style: scrollbar; }
 @media screen and (max-width: 600px) { h1 { width: 60%; } }
 
 @media screen and (max-width: 480px) { html, body { min-width: 320px; } }
-body { background: #242629; }
+body { background: #ffffff; }
 body.loading *, body.loading *:before, body.loading *:after { -moz-animation: none !important; -webkit-animation: none !important; -ms-animation: none !important; animation: none !important; -moz-transition: none !important; -webkit-transition: none !important; -ms-transition: none !important; transition: none !important; }
 body.resizing *, body.resizing *:before, body.resizing *:after { -moz-animation: none !important; -webkit-animation: none !important; -ms-animation: none !important; animation: none !important; -moz-transition: none !important; -webkit-transition: none !important; -ms-transition: none !important; transition: none !important; }
 
