@@ -1,0 +1,15 @@
+{{ define "main" }}
+  {{ $arts := where .Site.RegularPages "Type" "art" }}
+  {{ $pages := cond (gt (len $arts) 0) $arts .Site.RegularPages }}
+  {{ $p := .Paginate $pages }}
+
+  <section class="gallery-wrap">
+  {{ $offset := mul (sub $p.PageNumber 1) $p.PagerSize }}
+  {{ partial "gallery-grid.html" (dict "Pages" $p.Pages "Offset" $offset) }}
+  </section>
+
+  {{ if $p.HasNext }}
+    <a id="next-page" class="pagination-next" href="{{ $p.Next.URL }}" hidden>Next</a>
+  {{ end }}
+  <div id="infinite-scroll-sentinel" aria-hidden="true"></div>
+{{ end }}

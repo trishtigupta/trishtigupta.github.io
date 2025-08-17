@@ -1,0 +1,9 @@
+{{ define "main" }}
+  <meta name="robots" content="noindex,nofollow">
+  <script>
+    window.location.replace('{{ "/" | relURL }}');
+  </script>
+  <noscript>
+    <p>Redirecting… <a href='{{ "/" | relURL }}'>Go to Home</a></p>
+  </noscript>
+{{ end }}

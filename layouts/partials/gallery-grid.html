@@ -1,0 +1,38 @@
+{{ $pages := .Pages }}
+{{ $offset := default 0 .Offset }}
+{{ $locals := resources.Match "images/*" }}
+{{ $locals := sort $locals "Name" }}
+<div id="gallery" class="gallery">
+  {{ range $i, $p := $pages }}
+    {{ $imgURL := "" }}
+    {{ $res := ($p.Resources.ByType "image") }}
+    {{ if gt (len $res) 0 }}
+      {{ $imgURL = (index $res 0).RelPermalink }}
+    {{ else }}
+      {{/* Prefer local assets/images by index if available */}}
+      {{ $globalIndex := add $offset $i }}
+      {{ if lt $globalIndex (len $locals) }}
+        {{ $imgURL = (index $locals $globalIndex).RelPermalink }}
+      {{ else if $p.Params.image }}
+        {{ $src := $p.Params.image }}
+        {{ if (or (hasPrefix $src "http://") (hasPrefix $src "https://")) }}
+          {{ $imgURL = $src }}
+        {{ else }}
+          {{ $imgURL = (printf "/%s" ($src | strings.TrimPrefix "/")) }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    <article class="gallery-item">
+      <a href="{{ $p.RelPermalink }}" class="gallery-link" aria-label="View {{ $p.Title }}" data-full="{{ $imgURL }}" data-title="{{ $p.Title }}">
+        {{ if $imgURL }}
+          <img class="gallery-image" src="{{ $imgURL }}" alt="{{ $p.Title }}" loading="lazy" decoding="async">
+        {{ else }}
+          <div class="gallery-placeholder" aria-hidden="true">No Image</div>
+        {{ end }}
+        <div class="gallery-meta">
+          <h2 class="gallery-title">{{ $p.Title }}</h2>
+        </div>
+      </a>
+    </article>
+  {{ end }}
+</div>

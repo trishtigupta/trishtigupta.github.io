@@ -1,119 +1,34 @@
-# Settings
-baseurl = "https://trishtigupta.github.io"
+baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "Trishti Gupta"
-theme = "autophugo"
-disableKinds = ["taxonomy", "term"]
-#[taxonomies]
-#    tag = "tags"
-#    category = "categories"
 
-[services]
-    [services.googleAnalytics]
-        #ID = 'G-MEASUREMENT_ID'
+disableKinds = ["taxonomy", "term"]
+
+[pagination]
+  pagerSize = 18
 
 [params]
-    # Meta
-    description = "Trishti Gupta"
-    keywords = "photogallery, trishti gupta"
-    favicon = "favicon.ico"
-    #msvalidate = ""
-    #googlesiteverification = ""
-    #thumb_width = 480
-    #thumb_quality = 50
-    #full_width = 960
-    #full_quality = 90
-    column_count = 3
-    #breadcrumb_use_title = false
-    #filename_as_phototitle = false
-    images_downloadable = false
-    #images_downloadable_use_orig = false
-    #taxonomies_links = false
+  description = "A minimalist portfolio showcasing artworks in a scrolling gallery."
+  
+  [params.colors]
+  bg = "#ffffff"           # white background
+  fg = "#111111"            # keep strong contrast for text
+  muted = "#6b7280"
+  tileBg = "#ffffff"
+  accent = "#ff9f75"        # accent from your palette
+  labelBg = "rgba(255,159,117,0.60)"  # stronger orange-tinted overlay
+  labelFg = "#ffffff"
+  divider = "#e5e7eb"
+  shadow = "rgba(0,0,0,0.06)"
+  headerBg = "rgba(255,159,117,0.15)" # orange-tinted header when scrolled
+  headerBorder = "#ff9f75"
 
-    #[params.social]
-    #twitter = "twitter_example"
-    #facebook_admin = "facebook_example"
-
-    [params.author]
-    name = "Trishti Gupta"
-    email = "trishtigupta2002@gmail.com"
-
-    # Headerbar links
-    # Do not put too many links here,
-    # it will break mobile appearance
-
-    [[params.header.links]]
+[menu]
+  [[menu.main]]
+    name = "Recent Work"
+    url = "/"
+    weight = 10
+  [[menu.main]]
     name = "About"
-    url = "#footer"
-    icon = "fa-info-circle"
-
-    # Footer panel
-
-    [params.footer.paragraph]
-    headline = "Trishti Gupta- Educator & Illustrator"
-    text = "As an educator with an MA in Education, I believe learning should be an adventure. I love combining arts and crafts with education to create enriching experiences for children. My portfolio showcases original artwork alongside inspired pieces, all infused with my unique perspective. I'm excited to contribute to the education field in whatever way possible, and I'm also pursuing opportunities in children's literature illustration. Contact me at: iamtrishti@gmail.com"
-
-    [params.footer.social]
-    headline = "Follow me"
-
-    #[[params.footer.social.links]]
-    #label = "Twitter"
-    #url = "#"
-    #icon = "fa-twitter"
-
-    #[[params.footer.social.links]]
-    #label = "Facebook"
-    #url = "#"
-    #icon = "fa-facebook"
-
-    [[params.footer.social.links]]
-    label = "Instagram"
-    url = "#"
-    icon = "fa-instagram"
-
-    #[[params.footer.social.links]]
-    #label = "Github"
-    #url = "#"
-    #icon = "fa-github"
-
-    [[params.footer.social.links]]
-    label = "LinkedIn"
-    url = "https://www.linkedin.com/in/trishtigupta"
-    icon = "fa-linkedin"
-
-    # Contact form
-
-    # Since this template is static, the contact form uses www.formspree.io as a
-    # proxy. The form makes a POST request to their servers to send the actual
-    # email. Visitors can send up to a 1000 emails each month for free.
-    #
-    # What you need to do for the setup?
-    #
-    # - set your integration endpoint address under 'formspreeID' below
-    # - create a formspree account and a simple form 
-    # - then get the integration endpoint generated to you form
-    # - you're done. Happy mailing!
-
-    [params.footer.contact]
-    hide = true # Set this to true if you don't want to have a contact form on your site
-    formspreeID = "myuniqueID" # Getting value from Formspree integration endpoint (eg. https://formspree.io/f/myuniqueID)
-    headline = "Get in touch"
-    buttonText = "Send"
-    resetText = "Reset"
-
-    # 'warning' defines error messages for invalid inputs
-    [params.footer.contact.name]
-    text = "Name *"
-    warning = "Please, enter your name"
-
-    [params.footer.contact.email]
-    text = "Email *"
-    warning = "Please, enter your email."
-
-    [params.footer.contact.message]
-    text = "Message *"
-    warning = "Please, enter your message"
-
-    # Copyright
-    [params.footer.copyright]
-    name = "Trishti Gupta"
+    url = "/about/"
+  weight = 20

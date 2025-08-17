@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ .Site.Params.description }}">
+  {{ $css := resources.Get "css/gallery.css" | resources.Minify | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  {{/* Theme variables override from site params */}}
+  {{ partial "theme-variables.html" . }}
+</head>
+<body>
+  {{ partial "header.html" . }}
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+  <footer class="site-footer">
+    <p>© {{ now.Format "2006" }} · {{ .Site.Title }}</p>
+  </footer>
+  <script defer src="{{ "/js/infinite-scroll.js" | relURL }}"></script>
+  <script defer src="{{ "/js/lightbox.js" | relURL }}"></script>
+  <script>
+    (function(){
+      const h = document.querySelector('.site-header');
+      if(!h) return;
+      let ticking = false;
+      function update(){
+        const y = window.scrollY || window.pageYOffset;
+        if(y > 10){
+          h.classList.add('scrolled');
+        } else {
+          h.classList.remove('scrolled');
+        }
+        ticking = false;
+      }
+      function onScroll(){
+        if(!ticking){
+          window.requestAnimationFrame(update);
+          ticking = true;
+        }
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('load', update);
+      update();
+    })();
+  </script>
+</body>
+</html>
