@@ -2,6 +2,8 @@ baseURL = "https://trishtigupta.github.io/"
 languageCode = "en-us"
 title = "Trishti Gupta"
 
+publishDir = "docs"
+
 disableKinds = ["taxonomy", "term"]
 
 [pagination]

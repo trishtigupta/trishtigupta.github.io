@@ -7,6 +7,8 @@
     {{ $imgURL := "" }}
     {{ $srcset := "" }}
     {{ $sizes := "(max-width: 700px) 50vw, (max-width: 1100px) 33vw, 260px" }}
+    {{ $fullURL := "" }}
+    {{ $fullset := "" }}
     {{ $res := ($p.Resources.ByType "image") }}
     {{ if gt (len $res) 0 }}
       {{ $img := index $res 0 }}
@@ -15,6 +17,10 @@
       {{ $large := $img.Fit "1040x1040" }}
       {{ $srcset = printf "%s 520w, %s 780w, %s 1040w" $small.RelPermalink $med.RelPermalink $large.RelPermalink }}
       {{ $imgURL = $small.RelPermalink }}
+      {{ $xl := $img.Fit "1600x1600" }}
+      {{ $xxl := $img.Fit "2048x2048" }}
+      {{ $fullURL = $xl.RelPermalink }}
+      {{ $fullset = printf "%s 1040w, %s 1600w, %s 2048w" $large.RelPermalink $xl.RelPermalink $xxl.RelPermalink }}
     {{ else }}
       {{/* Prefer local assets/images by index if available */}}
       {{ $globalIndex := add $offset $i }}
@@ -25,17 +31,23 @@
         {{ $large := $imgRes.Fit "1040x1040" }}
         {{ $srcset = printf "%s 520w, %s 780w, %s 1040w" $small.RelPermalink $med.RelPermalink $large.RelPermalink }}
         {{ $imgURL = $small.RelPermalink }}
+        {{ $xl := $imgRes.Fit "1600x1600" }}
+        {{ $xxl := $imgRes.Fit "2048x2048" }}
+        {{ $fullURL = $xl.RelPermalink }}
+        {{ $fullset = printf "%s 1040w, %s 1600w, %s 2048w" $large.RelPermalink $xl.RelPermalink $xxl.RelPermalink }}
       {{ else if $p.Params.image }}
         {{ $src := $p.Params.image }}
         {{ if (or (hasPrefix $src "http://") (hasPrefix $src "https://")) }}
           {{ $imgURL = $src }}
+          {{ $fullURL = $src }}
         {{ else }}
           {{ $imgURL = (printf "/%s" ($src | strings.TrimPrefix "/")) }}
+          {{ $fullURL = $imgURL }}
         {{ end }}
       {{ end }}
     {{ end }}
     <article class="gallery-item">
-      <a href="{{ $p.RelPermalink }}" class="gallery-link" aria-label="View {{ $p.Title }}" data-full="{{ $imgURL }}" data-title="{{ $p.Title }}">
+  <a href="{{ $p.RelPermalink }}" class="gallery-link" aria-label="View {{ $p.Title }}" data-full="{{ cond (ne $fullURL "") $fullURL $imgURL }}" {{ if $fullset }}data-fullset="{{ $fullset }}" data-fullsizes="95vw"{{ end }} data-title="{{ $p.Title }}">
         {{ if $imgURL }}
           <img class="gallery-image" src="{{ $imgURL }}" {{ if $srcset }}srcset="{{ $srcset }}" sizes="{{ $sizes }}"{{ end }} alt="{{ $p.Title }}" loading="lazy" decoding="async">
         {{ else }}

@@ -6,9 +6,14 @@ body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 "Inter",ui-sans
 .site-header + main{padding-top:96px}
 .site-header{width:100%;padding:0.5rem;margin:0}
 .site-footer{max-width:1200px;margin:0 auto;padding:1rem}
-.site-header{position:fixed;top:0;left:0;right:0;z-index:1000;background:transparent;border-bottom:none;transition:background .25s ease, border-color .25s ease}
+.site-header{position:fixed;top:0;left:0;right:0;z-index:1000;background:linear-gradient(to bottom, rgba(255,255,255,.35) 0%, rgba(255,255,255,0) 100%);border-bottom:none;transition:background .25s ease, border-color .25s ease;-webkit-backdrop-filter:blur(6px) saturate(1.05);backdrop-filter:blur(6px) saturate(1.05)}
 /* On scroll, use a gradient that's more opaque at the top and more transparent at the bottom. No border. */
-.site-header.scrolled{background:linear-gradient(to bottom, var(--header-bg) 0%, rgba(255,255,255,0) 100%);border-bottom:none;-webkit-backdrop-filter:blur(8px) saturate(1.1);backdrop-filter:blur(8px) saturate(1.1);box-shadow:0 2px 8px var(--shadow)}
+.site-header.scrolled{background:linear-gradient(to bottom, rgba(255,255,255,.78) 0%, rgba(255,255,255,.12) 100%);border-bottom:none;-webkit-backdrop-filter:blur(8px) saturate(1.1);backdrop-filter:blur(8px) saturate(1.1);box-shadow:0 4px 16px var(--shadow)}
+/* Fallback when backdrop-filter isn't supported */
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+	.site-header{background:rgba(255,255,255,.85)}
+	.site-header.scrolled{background:rgba(255,255,255,.9)}
+}
 .header-inner{display:flex;align-items:center;justify-content:space-between;gap:.75rem;min-height:56px;width:100%;max-width:1400px;margin:0 auto;padding:0 1rem;flex-wrap:wrap}
 .brand{min-width:0}
 .brand a{font-weight:700;letter-spacing:.2px;color:var(--fg);text-decoration:none;font-family:"Arial Rounded MT Bold","Arial Rounded",Arial,"Helvetica Rounded",Helvetica,sans-serif;font-size:clamp(24px,6vw,48px);line-height:1.1;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
