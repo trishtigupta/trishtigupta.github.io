@@ -18,7 +18,8 @@ body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 "Inter",ui-sans
 .brand{min-width:0}
 .brand a{font-weight:700;letter-spacing:.2px;color:var(--fg);text-decoration:none;font-family:"Arial Rounded MT Bold","Arial Rounded",Arial,"Helvetica Rounded",Helvetica,sans-serif;font-size:clamp(24px,6vw,48px);line-height:1.1;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .main-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:.75rem;flex-wrap:wrap}
-.main-nav a{color:var(--fg);text-decoration:none}
+.main-nav a{color:var(--fg);text-decoration:none;font-weight:700;transition:color .15s ease}
+.main-nav a:hover,.main-nav a:focus-visible{color:var(--accent);outline:none}
 .gallery-wrap{max-width:1400px;margin:0 auto;padding:0 1rem 3rem}
 hr{border:0;border-top:1px solid var(--divider);margin:2rem 0}
 .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:28px;grid-auto-flow:dense}
