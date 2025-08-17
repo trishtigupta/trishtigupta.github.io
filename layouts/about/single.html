@@ -12,7 +12,10 @@
       {{ else }}
         {{ $img := (index (.Resources.ByType "image") 0) }}
         {{ if $img }}
-          <img src="{{ $img.RelPermalink }}" alt="{{ $.Title }} portrait" loading="lazy" decoding="async">
+          {{ $small := $img.Fit "920x1200" }}
+          {{ $med := $img.Fit "1380x1800" }}
+          {{ $large := $img.Fit "1840x2400" }}
+          <img src="{{ $small.RelPermalink }}" srcset="{{ $small.RelPermalink }} 920w, {{ $med.RelPermalink }} 1380w, {{ $large.RelPermalink }} 1840w" sizes="(max-width: 900px) 100vw, 520px" alt="{{ $.Title }} portrait" loading="lazy" decoding="async">
         {{ end }}
       {{ end }}
     </figure>

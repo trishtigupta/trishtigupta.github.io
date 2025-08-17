@@ -7,6 +7,8 @@
   <meta name="description" content="{{ .Site.Params.description }}">
   {{ $css := resources.Get "css/gallery.css" | resources.Minify | resources.Fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   {{/* Theme variables override from site params */}}
   {{ partial "theme-variables.html" . }}
 </head>

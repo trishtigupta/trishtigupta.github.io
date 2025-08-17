@@ -8,7 +8,7 @@ body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 "Inter",ui-sans
 .site-footer{max-width:1200px;margin:0 auto;padding:1rem}
 .site-header{position:fixed;top:0;left:0;right:0;z-index:1000;background:transparent;border-bottom:none;transition:background .25s ease, border-color .25s ease}
 /* On scroll, use a gradient that's more opaque at the top and more transparent at the bottom. No border. */
-.site-header.scrolled{background:linear-gradient(to bottom, rgba(255,255,255,.85) 0%, rgba(255,255,255,.10) 100%);border-bottom:none;backdrop-filter:saturate(1.2) blur(8px);box-shadow:0 4px 16px var(--shadow)}
+.site-header.scrolled{background:var(--header-bg);border-bottom:1px solid var(--header-border);-webkit-backdrop-filter:blur(8px) saturate(1.1);backdrop-filter:blur(8px) saturate(1.1);box-shadow:0 2px 8px var(--shadow)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;gap:.75rem;min-height:56px;width:100%;max-width:1400px;margin:0 auto;padding:0 1rem;flex-wrap:wrap}
 .brand{min-width:0}
 .brand a{font-weight:700;letter-spacing:.2px;color:var(--fg);text-decoration:none;font-family:"Arial Rounded MT Bold","Arial Rounded",Arial,"Helvetica Rounded",Helvetica,sans-serif;font-size:clamp(24px,6vw,48px);line-height:1.1;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -21,7 +21,7 @@ hr{border:0;border-top:1px solid var(--divider);margin:2rem 0}
 .gallery-item{margin:0;background:transparent;position:relative}
 .gallery-link{display:block;color:inherit;text-decoration:none;border-radius:0;overflow:hidden}
 .gallery-image{width:100%;height:100%;display:block;object-fit:cover;aspect-ratio:1/1}
-.gallery-meta{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s ease;background:var(--label-bg);-webkit-backdrop-filter:blur(16px) saturate(1.1);backdrop-filter:blur(16px) saturate(1.1)}
+.gallery-meta{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s ease;background:var(--label-bg);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
 .gallery-item:hover .gallery-meta,.gallery-link:focus-visible .gallery-meta{opacity:1}
 /* On touch devices, keep overlays hidden unless the user taps (we'll toggle .tapped via JS) */
 @media (hover: none){

@@ -5,14 +5,26 @@
 <div id="gallery" class="gallery">
   {{ range $i, $p := $pages }}
     {{ $imgURL := "" }}
+    {{ $srcset := "" }}
+    {{ $sizes := "(max-width: 700px) 50vw, (max-width: 1100px) 33vw, 260px" }}
     {{ $res := ($p.Resources.ByType "image") }}
     {{ if gt (len $res) 0 }}
-      {{ $imgURL = (index $res 0).RelPermalink }}
+      {{ $img := index $res 0 }}
+      {{ $small := $img.Fit "520x520" }}
+      {{ $med := $img.Fit "780x780" }}
+      {{ $large := $img.Fit "1040x1040" }}
+      {{ $srcset = printf "%s 520w, %s 780w, %s 1040w" $small.RelPermalink $med.RelPermalink $large.RelPermalink }}
+      {{ $imgURL = $small.RelPermalink }}
     {{ else }}
       {{/* Prefer local assets/images by index if available */}}
       {{ $globalIndex := add $offset $i }}
       {{ if lt $globalIndex (len $locals) }}
-        {{ $imgURL = (index $locals $globalIndex).RelPermalink }}
+        {{ $imgRes := index $locals $globalIndex }}
+        {{ $small := $imgRes.Fit "520x520" }}
+        {{ $med := $imgRes.Fit "780x780" }}
+        {{ $large := $imgRes.Fit "1040x1040" }}
+        {{ $srcset = printf "%s 520w, %s 780w, %s 1040w" $small.RelPermalink $med.RelPermalink $large.RelPermalink }}
+        {{ $imgURL = $small.RelPermalink }}
       {{ else if $p.Params.image }}
         {{ $src := $p.Params.image }}
         {{ if (or (hasPrefix $src "http://") (hasPrefix $src "https://")) }}
@@ -25,7 +37,7 @@
     <article class="gallery-item">
       <a href="{{ $p.RelPermalink }}" class="gallery-link" aria-label="View {{ $p.Title }}" data-full="{{ $imgURL }}" data-title="{{ $p.Title }}">
         {{ if $imgURL }}
-          <img class="gallery-image" src="{{ $imgURL }}" alt="{{ $p.Title }}" loading="lazy" decoding="async">
+          <img class="gallery-image" src="{{ $imgURL }}" {{ if $srcset }}srcset="{{ $srcset }}" sizes="{{ $sizes }}"{{ end }} alt="{{ $p.Title }}" loading="lazy" decoding="async">
         {{ else }}
           <div class="gallery-placeholder" aria-hidden="true">No Image</div>
         {{ end }}
