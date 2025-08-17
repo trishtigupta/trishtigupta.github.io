@@ -6,12 +6,12 @@
   --muted: {{ default "#6b7280" .Site.Params.colors.muted }};
   --tile-bg: {{ default "#f8f9fb" .Site.Params.colors.tileBg }};
   --accent: {{ default "#111111" .Site.Params.colors.accent }};
-  --label-bg: {{ default "rgba(255,159,117,0.45)" .Site.Params.colors.labelBg }};
+  --label-bg: {{ (default "rgba(255,159,117,0.45)" .Site.Params.colors.labelBg) | safeCSS }};
   --label-fg: {{ default "#ffffff" .Site.Params.colors.labelFg }};
   --divider: {{ default "#e5e7eb" .Site.Params.colors.divider }};
-  --shadow: {{ default "rgba(0,0,0,0.06)" .Site.Params.colors.shadow }};
+  --shadow: {{ (default "rgba(0,0,0,0.06)" .Site.Params.colors.shadow) | safeCSS }};
   /* Header tint */
-  --header-bg: {{ default "rgba(255,159,117,0.15)" .Site.Params.colors.headerBg }};
+  --header-bg: {{ (default "rgba(255,159,117,0.15)" .Site.Params.colors.headerBg) | safeCSS }};
   --header-border: {{ default "#ff9f75" .Site.Params.colors.headerBorder }};
 }
 </style>

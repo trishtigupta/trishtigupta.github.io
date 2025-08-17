@@ -3,7 +3,12 @@
   <div class="about-grid">
     <figure class="about-portrait">
       {{ with .Params.portrait }}
-        <img src="{{ . }}" alt="{{ $.Title }} portrait" loading="lazy" decoding="async">
+        {{ $p := . }}
+        {{ if hasPrefix $p "http" }}
+          <img src="{{ $p }}" alt="{{ $.Title }} portrait" loading="lazy" decoding="async">
+        {{ else }}
+          <img src="{{ $p | relURL }}" alt="{{ $.Title }} portrait" loading="lazy" decoding="async">
+        {{ end }}
       {{ else }}
         {{ $img := (index (.Resources.ByType "image") 0) }}
         {{ if $img }}
