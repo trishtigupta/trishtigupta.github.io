@@ -54,6 +54,10 @@ hr{border:0;border-top:1px solid var(--divider);margin:2rem 0}
 .about-meta .icon{width:20px;height:20px;stroke-width:1.75}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .about-body p{margin:0 0 1rem}
+/* Prevent long words/links from overflowing on small screens */
+.about-content{min-width:0}
+.about-body{overflow-wrap:anywhere;word-break:break-word}
+.about-body a{word-break:break-word}
 
 /* Prevent horizontal overflow on small screens */
 html, body { overflow-x: hidden }
