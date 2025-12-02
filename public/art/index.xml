@@ -2,136 +2,136 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Trishti Gupta</title>
-    <link>https://trishtigupta.github.io/art/</link>
+    <link>http://localhost:1313/art/</link>
     <description>Recent content on Trishti Gupta</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Dec 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://trishtigupta.github.io/art/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/art/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Where&#39;s the Dolphin</title>
-      <link>https://trishtigupta.github.io/art/12_wheres_the_dolphin/</link>
+      <link>http://localhost:1313/art/12_wheres_the_dolphin/</link>
       <pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://trishtigupta.github.io/art/12_wheres_the_dolphin/</guid>
+      <guid>http://localhost:1313/art/12_wheres_the_dolphin/</guid>
       <description>&lt;p&gt;Ribbons of light across the night.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Jellyfish</title>
-      <link>https://trishtigupta.github.io/art/02_jellyfish/</link>
+      <link>http://localhost:1313/art/02_jellyfish/</link>
       <pubDate>Sun, 17 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://trishtigupta.github.io/art/02_jellyfish/</guid>
+      <guid>http://localhost:1313/art/02_jellyfish/</guid>
       <description>&lt;p&gt;A study in cool tones and early light.&lt;/p&gt;</description>
     </item>
     <item>
       <title>APU Sunset</title>
-      <link>https://trishtigupta.github.io/art/01_apu_sunset/</link>
+      <link>http://localhost:1313/art/01_apu_sunset/</link>
       <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://trishtigupta.github.io/art/01_apu_sunset/</guid>
+      <guid>http://localhost:1313/art/01_apu_sunset/</guid>
       <description>&lt;p&gt;Warm hues across a quiet landscape.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Glass Mosaic</title>
-      <link>https://trishtigupta.github.io/art/07_glass_mosaic/</link>
+      <link>http://localhost:1313/art/07_glass_mosaic/</link>
       <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://trishtigupta.github.io/art/07_glass_mosaic/</guid>
+      <guid>http://localhost:1313/art/07_glass_mosaic/</guid>
       <description>&lt;p&gt;Oil on canvas, 50×60 cm.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Midnight Moon</title>
-      <link>https://trishtigupta.github.io/art/03_midnight_moon/</link>
+      <link>http://localhost:1313/art/03_midnight_moon/</link>
       <pubDate>Fri, 15 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://trishtigupta.github.io/art/03_midnight_moon/</guid>
+      <guid>http://localhost:1313/art/03_midnight_moon/</guid>
       <description>&lt;p&gt;Reflections of neon under summer rain.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Boat and Sunset</title>
-      <link>https://trishtigupta.github.io/art/13_boat_and_sunset/</link>
+      <link>http://localhost:1313/art/13_boat_and_sunset/</link>
       <pubDate>Thu, 14 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://trishtigupta.github.io/art/13_boat_and_sunset/</guid>
+      <guid>http://localhost:1313/art/13_boat_and_sunset/</guid>
       <description>&lt;p&gt;Still water mirroring distant peaks.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Bumble Bee</title>
-      <link>https://trishtigupta.github.io/art/04_bumblebee/</link>
+      <link>http://localhost:1313/art/04_bumblebee/</link>
       <pubDate>Mon, 11 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://trishtigupta.github.io/art/04_bumblebee/</guid>
+      <guid>http://localhost:1313/art/04_bumblebee/</guid>
       <description>&lt;p&gt;Wind-sculpted shapes across the horizon.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Eyes</title>
-      <link>https://trishtigupta.github.io/art/05_eyes/</link>
+      <link>http://localhost:1313/art/05_eyes/</link>
       <pubDate>Mon, 11 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://trishtigupta.github.io/art/05_eyes/</guid>
+      <guid>http://localhost:1313/art/05_eyes/</guid>
       <description>&lt;p&gt;Wind-sculpted shapes across the horizon.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Penguin</title>
-      <link>https://trishtigupta.github.io/art/08_penguin/</link>
+      <link>http://localhost:1313/art/08_penguin/</link>
       <pubDate>Sun, 10 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://trishtigupta.github.io/art/08_penguin/</guid>
+      <guid>http://localhost:1313/art/08_penguin/</guid>
       <description>&lt;p&gt;A narrow path under tall trees.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Starry Night</title>
-      <link>https://trishtigupta.github.io/art/06_starry_night/</link>
+      <link>http://localhost:1313/art/06_starry_night/</link>
       <pubDate>Fri, 08 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://trishtigupta.github.io/art/06_starry_night/</guid>
+      <guid>http://localhost:1313/art/06_starry_night/</guid>
       <description>&lt;p&gt;A bloom caught in stillness.&lt;/p&gt;</description>
     </item>
     <item>
       <title>A Cafe</title>
-      <link>https://trishtigupta.github.io/art/14_a_cafe/</link>
+      <link>http://localhost:1313/art/14_a_cafe/</link>
       <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://trishtigupta.github.io/art/14_a_cafe/</guid>
+      <guid>http://localhost:1313/art/14_a_cafe/</guid>
       <description>&lt;p&gt;Fluorescent color in the dark.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Coastal Landscape</title>
-      <link>https://trishtigupta.github.io/art/15_coastal_landscape/</link>
+      <link>http://localhost:1313/art/15_coastal_landscape/</link>
       <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://trishtigupta.github.io/art/15_coastal_landscape/</guid>
+      <guid>http://localhost:1313/art/15_coastal_landscape/</guid>
       <description>&lt;p&gt;Fluorescent color in the dark.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Coastal Landscape</title>
-      <link>https://trishtigupta.github.io/art/17_crafts/</link>
+      <link>http://localhost:1313/art/17_crafts/</link>
       <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://trishtigupta.github.io/art/17_crafts/</guid>
+      <guid>http://localhost:1313/art/17_crafts/</guid>
       <description>&lt;p&gt;Fluorescent color in the dark.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Introspection</title>
-      <link>https://trishtigupta.github.io/art/16_introspection/</link>
+      <link>http://localhost:1313/art/16_introspection/</link>
       <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://trishtigupta.github.io/art/16_introspection/</guid>
+      <guid>http://localhost:1313/art/16_introspection/</guid>
       <description>&lt;p&gt;Fluorescent color in the dark.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Misc</title>
-      <link>https://trishtigupta.github.io/art/18_misc/</link>
+      <link>http://localhost:1313/art/18_misc/</link>
       <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://trishtigupta.github.io/art/18_misc/</guid>
+      <guid>http://localhost:1313/art/18_misc/</guid>
       <description>&lt;p&gt;Fluorescent color in the dark.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Bird Watercolor</title>
-      <link>https://trishtigupta.github.io/art/11_bird_watercolor/</link>
+      <link>http://localhost:1313/art/11_bird_watercolor/</link>
       <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://trishtigupta.github.io/art/11_bird_watercolor/</guid>
+      <guid>http://localhost:1313/art/11_bird_watercolor/</guid>
       <description>&lt;p&gt;Boats slipping into fog.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Women Community</title>
-      <link>https://trishtigupta.github.io/art/09_women_community/</link>
+      <link>http://localhost:1313/art/09_women_community/</link>
       <pubDate>Wed, 30 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>https://trishtigupta.github.io/art/09_women_community/</guid>
+      <guid>http://localhost:1313/art/09_women_community/</guid>
       <description>&lt;p&gt;A reflection of clouds and lines.&lt;/p&gt;</description>
     </item>
     <item>
       <title>My Perception</title>
-      <link>https://trishtigupta.github.io/art/10_my_perception/</link>
+      <link>http://localhost:1313/art/10_my_perception/</link>
       <pubDate>Mon, 28 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>https://trishtigupta.github.io/art/10_my_perception/</guid>
+      <guid>http://localhost:1313/art/10_my_perception/</guid>
       <description>&lt;p&gt;Silence under a silver sky.&lt;/p&gt;</description>
     </item>
   </channel>
