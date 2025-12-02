@@ -1,4 +1,4 @@
-baseURL = "https://trishtigupta.github.io/"
+baseURL = "https://www.trishtigupta.com/"
 languageCode = "en-us"
 title = "Trishti Gupta"
 
@@ -31,4 +31,4 @@ disableKinds = ["taxonomy", "term"]
   [[menu.main]]
     name = "About"
     url = "/about/"
-  weight = 20
+    weight = 20
