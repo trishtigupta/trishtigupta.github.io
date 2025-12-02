@@ -14,4 +14,4 @@ As an educator with an MA in Education, I believe learning should be an adventur
 
 I’m excited to contribute to the education field in whatever way possible, and I’m also pursuing opportunities in children’s literature illustration. 
 
-Contact me at: iamtrishti@gmail.com
+Contact me at: contact@trishtigupta.com
