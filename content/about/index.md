@@ -2,7 +2,7 @@
 title: "About"
 subtitle: "Visual Artist"
 location: "Bengaluru, India"
-email: "iamtrishti@gmail.com"
+email: "contact@trishtigupta.com"
 instagram: "https://www.instagram.com/iamtrishti/"
 resume: "/files/resume.pdf"
 # Use a page resource image in this folder (preferred) or set a remote portrait URL below
