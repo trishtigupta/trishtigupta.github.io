@@ -5,6 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}</title>
   <meta name="description" content="{{ .Site.Params.description }}">
+  <link rel="canonical" href="{{ .Permalink }}">
+  <link rel="icon" href="{{ "/favicon.svg" | relURL }}" type="image/svg+xml">
+  <meta name="robots" content="index,follow">
+  {{/* Basic Open Graph & Twitter meta */}}
+  {{ $pageTitle := cond .IsHome .Site.Title .Title }}
+  {{ $pageDesc := cond (ne (printf "%s" .Params.description) "") .Params.description .Site.Params.description }}
+  <meta property="og:title" content="{{ $pageTitle }}">
+  <meta property="og:description" content="{{ $pageDesc }}">
+  <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  {{/* Try to pick a representative image: first page resource or .Params.image */}}
+  {{ $ogimg := "" }}
+  {{ with (.Resources.ByType "image") }}
+    {{ if gt (len .) 0 }}
+      {{ $ogimg = ((index . 0).RelPermalink | absURL) }}
+    {{ end }}
+  {{ end }}
+  {{ if and (eq $ogimg "") (.Params.image) }}
+    {{ $src := .Params.image }}
+    {{ if (or (hasPrefix $src "http://") (hasPrefix $src "https://")) }}
+      {{ $ogimg = $src }}
+    {{ else }}
+      {{ $ogimg = ((printf "/%s" ($src | strings.TrimPrefix "/")) | absURL) }}
+    {{ end }}
+  {{ end }}
+  {{ if ne $ogimg "" }}
+    <meta property="og:image" content="{{ $ogimg }}">
+    <meta name="twitter:card" content="summary_large_image">
+  {{ else }}
+    <meta name="twitter:card" content="summary">
+  {{ end }}
+  <meta name="twitter:title" content="{{ $pageTitle }}">
+  <meta name="twitter:description" content="{{ $pageDesc }}">
+  {{/* Minimal JSON-LD for the site */}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": {{ .Site.Title | jsonify }},
+    "url": {{ .Site.BaseURL | jsonify }}
+  }
+  </script>
   {{ $css := resources.Get "css/gallery.css" | resources.Minify | resources.Fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">

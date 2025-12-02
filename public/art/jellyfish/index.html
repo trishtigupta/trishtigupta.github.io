@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jellyfish · Trishti Gupta</title>
+  <meta name="description" content="A minimalist portfolio showcasing artworks in a scrolling gallery.">
+  
+  <link rel="stylesheet" href="/css/gallery.min.41538c9d7dd2ccddd142fb83020411b453d94093aef12a36203b4f101272f7ec.css" integrity="sha256-QVOMnX3SzN3RQvuDAgQRtFPZQJOu8So2IDtPEBJy9&#43;w=">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <style>
+:root{
+   
+  --bg: #ffffff;
+  --fg: #111111;
+  --muted: #6b7280;
+  --tile-bg: #ffffff;
+  --accent: #ff9f75;
+  --label-bg: rgba(255,159,117,0.45);
+  --label-fg: #ffffff;
+  --divider: #e5e7eb;
+  --shadow: rgba(0,0,0,0.06);
+   
+  --header-bg: rgba(255,159,117,0.15);
+  --header-border: #ff9f75;
+}
+</style>
+
+</head>
+<body>
+  <header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <a href="/">Trishti Gupta</a>
+    </div>
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul>
+        
+          
+            <li>
+              <a href="/" >Recent Work</a>
+            </li>
+          
+            <li>
+              <a href="/about/" >About</a>
+            </li>
+          
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <main>
+    
+<article class="page">
+  <header><h1>Jellyfish</h1></header>
+  <section class="page-body">
+    <p>A study in cool tones and early light.</p>
+
+  </section>
+</article>
+
+  </main>
+  <footer class="site-footer">
+    <p>© 2025 · Trishti Gupta</p>
+  </footer>
+  <script defer src="/js/infinite-scroll.js"></script>
+  <script defer src="/js/lightbox.js"></script>
+  <script>
+    (function(){
+      const h = document.querySelector('.site-header');
+      if(!h) return;
+      let ticking = false;
+      function update(){
+        const y = window.scrollY || window.pageYOffset;
+  if(y > 2){
+          h.classList.add('scrolled');
+        } else {
+          h.classList.remove('scrolled');
+        }
+        ticking = false;
+      }
+      function onScroll(){
+        if(!ticking){
+          window.requestAnimationFrame(update);
+          ticking = true;
+        }
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('load', update);
+      update();
+    })();
+  </script>
+</body>
+</html>

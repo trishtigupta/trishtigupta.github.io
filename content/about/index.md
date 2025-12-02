@@ -4,7 +4,7 @@ subtitle: "Visual Artist"
 location: "Bengaluru, India"
 email: "iamtrishti@gmail.com"
 instagram: "https://www.instagram.com/iamtrishti/"
-resume: "/resume.pdf"
+resume: "/files/resume.pdf"
 # Use a page resource image in this folder (preferred) or set a remote portrait URL below
 portrait: "/images/trish.jpg"
 linkedin: "https://www.linkedin.com/in/trishtigupta"

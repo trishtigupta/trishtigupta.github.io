@@ -26,40 +26,43 @@
         {{ with .Params.location }}<li class="location">{{ . }}</li>{{ end }}
         {{ with .Params.email }}
           <li>
-            <a class="icon-link" href="mailto:{{ . }}" aria-label="Email">
+            <a class="icon-link" href="mailto:{{ . }}" aria-label="Email" title="Email">
               <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25H4.5a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15A2.25 2.25 0 0 0 2.25 6.75m19.5 0-9.75 6.375L2.25 6.75" />
               </svg>
               <span class="sr-only">{{ . }}</span>
+              <span class="icon-caption" aria-hidden="true">Email</span>
             </a>
           </li>
         {{ end }}
         {{ with .Params.instagram }}
           <li>
-            <a class="icon-link" href="{{ . }}" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <a class="icon-link" href="{{ . }}" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
               <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
                 <rect x="3" y="3" width="18" height="18" rx="5" ry="5" />
                 <circle cx="12" cy="12" r="4" />
                 <circle cx="17.5" cy="6.5" r="1.25" />
               </svg>
               <span class="sr-only">Instagram</span>
+              <span class="icon-caption" aria-hidden="true">Instagram</span>
             </a>
           </li>
         {{ end }}
         {{ with .Params.resume }}
           <li>
-            <a class="icon-link" href="{{ . }}" target="_blank" rel="noopener noreferrer" aria-label="Resume">
+            <a class="icon-link" href="{{ . | relURL }}" target="_blank" rel="noopener noreferrer" aria-label="Resume (PDF)" title="Resume" download>
               <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6M9 11h6M9 15h3"/>
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3.75h7.5L18.75 8.25v12a.75.75 0 0 1-.75.75h-10.5a.75.75 0 0 1-.75-.75v-16.5a.75.75 0 0 1 .75-.75z"/>
               </svg>
-              <span class="sr-only">Resume</span>
+              <span class="sr-only">Download Resume PDF</span>
+              <span class="icon-caption" aria-hidden="true">Resume</span>
             </a>
           </li>
         {{ end }}
         {{ with .Params.linkedin }}
           <li>
-            <a class="icon-link" href="{{ . }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <a class="icon-link" href="{{ . }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
               <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
                 <rect x="3" y="3" width="18" height="18" rx="3"/>
                 <circle cx="8" cy="10" r="1.25"/>
@@ -67,6 +70,7 @@
                 <path d="M12 12v5m0-3a2 2 0 1 1 4 0v3" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
               <span class="sr-only">LinkedIn</span>
+              <span class="icon-caption" aria-hidden="true">LinkedIn</span>
             </a>
           </li>
         {{ end }}

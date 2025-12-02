@@ -9,9 +9,30 @@
     {{ $sizes := "(max-width: 700px) 50vw, (max-width: 1100px) 33vw, 260px" }}
     {{ $fullURL := "" }}
     {{ $fullset := "" }}
+    {{/* Build album slides: prefer page resources, else .Params.images, else single image fallback */}}
+    {{ $album := slice }}
     {{ $res := ($p.Resources.ByType "image") }}
+    {{/* Sort page bundle images by leading numeric prefix in filename (e.g. 01_cover.jpg, 10-detail.png). Non-numeric prefixes go last, then by Name. */}}
+    {{ $ordered := slice }}
     {{ if gt (len $res) 0 }}
-      {{ $img := index $res 0 }}
+      {{ $annotated := slice }}
+      {{ range $r := $res }}
+        {{ $name := $r.Name }}
+        {{ $match := findRE "^[0-9]+" $name }}
+        {{ $num := 999999 }}
+        {{ if gt (len $match) 0 }}
+          {{ $raw := index $match 0 }}
+          {{ $strip := replaceRE "^0+" "" $raw }}
+          {{ if eq $strip "" }}{{ $strip = "0" }}{{ end }}
+          {{ $num = (int $strip) }}
+        {{ end }}
+        {{ $annotated = $annotated | append (dict "res" $r "num" $num "name" $name) }}
+      {{ end }}
+      {{ $sorted := sort $annotated "num" "name" }}
+      {{ range $item := $sorted }}
+        {{ $ordered = $ordered | append $item.res }}
+      {{ end }}
+      {{ $img := index $ordered 0 }}
       {{ $small := $img.Fit "520x520" }}
       {{ $med := $img.Fit "780x780" }}
       {{ $large := $img.Fit "1040x1040" }}
@@ -21,6 +42,19 @@
       {{ $xxl := $img.Fit "2048x2048" }}
       {{ $fullURL = $xl.RelPermalink }}
       {{ $fullset = printf "%s 1040w, %s 1600w, %s 2048w" $large.RelPermalink $xl.RelPermalink $xxl.RelPermalink }}
+      {{/* Build album from all page image resources */}}
+      {{ range $r := $ordered }}
+        {{ $rLarge := $r.Fit "1040x1040" }}
+        {{ $rXL := $r.Fit "1600x1600" }}
+        {{ $rXXL := $r.Fit "2048x2048" }}
+        {{ $slide := dict
+            "src" $rXL.RelPermalink
+            "srcset" (printf "%s 1040w, %s 1600w, %s 2048w" $rLarge.RelPermalink $rXL.RelPermalink $rXXL.RelPermalink)
+            "sizes" "95vw"
+            "title" $p.Title
+        }}
+        {{ $album = $album | append $slide }}
+      {{ end }}
     {{ else }}
       {{/* Prefer local assets/images by index if available */}}
       {{ $globalIndex := add $offset $i }}
@@ -35,14 +69,31 @@
         {{ $xxl := $imgRes.Fit "2048x2048" }}
         {{ $fullURL = $xl.RelPermalink }}
         {{ $fullset = printf "%s 1040w, %s 1600w, %s 2048w" $large.RelPermalink $xl.RelPermalink $xxl.RelPermalink }}
+        {{/* Album contains at least this image when no page resources */}}
+        {{ $album = $album | append (dict "src" $xl.RelPermalink "srcset" (printf "%s 1040w, %s 1600w, %s 2048w" $large.RelPermalink $xl.RelPermalink $xxl.RelPermalink) "sizes" "95vw" "title" $p.Title) }}
+      {{ else if $p.Params.images }}
+        {{/* If a list of images is provided in front matter */}}
+        {{ $imgs := $p.Params.images }}
+        {{ with $imgs }}
+          {{ range $j, $u := . }}
+            {{ $url := cond (or (hasPrefix $u "http://") (hasPrefix $u "https://")) $u (printf "/%s" ($u | strings.TrimPrefix "/")) }}
+            {{ if eq $j 0 }}
+              {{ $imgURL = $url }}
+              {{ $fullURL = $url }}
+            {{ end }}
+            {{ $album = $album | append (dict "src" $url "title" $p.Title) }}
+          {{ end }}
+        {{ end }}
       {{ else if $p.Params.image }}
         {{ $src := $p.Params.image }}
         {{ if (or (hasPrefix $src "http://") (hasPrefix $src "https://")) }}
           {{ $imgURL = $src }}
           {{ $fullURL = $src }}
+          {{ $album = $album | append (dict "src" $src "title" $p.Title) }}
         {{ else }}
           {{ $imgURL = (printf "/%s" ($src | strings.TrimPrefix "/")) }}
           {{ $fullURL = $imgURL }}
+          {{ $album = $album | append (dict "src" $fullURL "title" $p.Title) }}
         {{ end }}
       {{ end }}
     {{ end }}
@@ -57,6 +108,10 @@
           <h2 class="gallery-title">{{ $p.Title }}</h2>
         </div>
       </a>
+      {{/* Embed album data as JSON for lightbox to consume */}}
+      {{ if gt (len $album) 0 }}
+        <template class="album-data" type="application/json">{{ $album | jsonify }}</template>
+      {{ end }}
     </article>
   {{ end }}
 </div>

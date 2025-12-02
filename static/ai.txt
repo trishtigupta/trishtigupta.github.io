@@ -1,0 +1,14 @@
+# ai.txt (optional): declare AI usage policy. Some AI crawlers/vendors read this.
+# This complements robots.txt but is not a formal standard; keep robots.txt in place.
+
+# Disallow using site content for AI training.
+Policy: training=disallow
+
+# Disallow generating datasets from content.
+Policy: dataset=disallow
+
+# Crawling for search indexing is allowed; adhere to robots.txt rules.
+Policy: crawling=allow
+
+# Contact
+Contact: iamtrishti@gmail.com
