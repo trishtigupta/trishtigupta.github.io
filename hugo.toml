@@ -8,7 +8,7 @@ disableKinds = ["taxonomy", "term"]
   pagerSize = 18
 
 [params]
-  description = "A minimalist portfolio showcasing artworks in a scrolling gallery."
+  description = "I am a Visual Artist, an Educator and a Teacher trainer by Profession. This Page showcases the work that I am passionate and most engaged about."
   
   [params.colors]
   bg = "#ffffff"           # white background
