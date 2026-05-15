@@ -6,8 +6,12 @@
   <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}</title>
   <meta name="description" content="{{ .Site.Params.description }}">
   <link rel="canonical" href="{{ .Permalink }}">
-  <link rel="icon" href="{{ "/favicon.svg" | relURL }}" type="image/svg+xml">
+  <link rel="icon" href="{{ "/favicon.svg" | absURL }}" type="image/svg+xml" sizes="any">
   <meta name="robots" content="index,follow">
+  <meta name="generator" content="{{ hugo.Generator }}">
+  <meta name="author" content="{{ .Site.Title }}">
+  <meta name="theme-color" content="{{ .Site.Params.colors.bg | default "#ffffff" }}">
+  
   {{/* Basic Open Graph & Twitter meta */}}
   {{ $pageTitle := cond .IsHome .Site.Title .Title }}
   {{ $pageDesc := cond (ne (printf "%s" .Params.description) "") .Params.description .Site.Params.description }}
